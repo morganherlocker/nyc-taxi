@@ -5,7 +5,7 @@ This project creates animations from NYC taxi trip data, released under a FOIL r
 
 ##How it works
 
-The raw trip data contains only a small amount of metadata, along with origin and destination lat/lon pairs. Using OpenStreetMap and OSRM (a routing engine), we can guess the trips that taxis took between their start and stop points. Each segment of the route is indexed into a leveldb database, which can be scanned for reading data -- in order -- for any slice of time.
+The raw trip data contains only a small amount of metadata, along with origin and destination lat/lon pairs. Using OpenStreetMap and OSRM (a routing engine), we can guess the trips that taxis took between their start and stop points. Each segment of the route is indexed into a leveldb database, which can be scanned for reading data, in order, for any slice of time.
 
 ##Usage
 
