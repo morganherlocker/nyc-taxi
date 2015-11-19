@@ -1,7 +1,7 @@
 nyc-taxi
 ---
 
-This project creates animations from NYC taxi trip data, released under a FOIL request.
+This project creates animations from NYC taxi trip data, released under a [FOIL request](http://www.ag.ny.gov/bureau/foil).
 
 ##How it works
 
@@ -10,6 +10,8 @@ The raw trip data contains only a small amount of metadata, along with origin an
 ##Usage
 
 ###Setup
+
+*Note: you must follow the platform-specific install steps for [node-canvas](https://github.com/Automattic/node-canvas) before you begin*
 
 ```
 npm install

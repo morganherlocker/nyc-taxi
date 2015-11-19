@@ -2,10 +2,10 @@ trips:
 	curl https://storage.googleapis.com/tlc-trip-data/2015/yellow_tripdata_2015-01.csv -o data/2015-01.csv;
 
 osrm:
-	curl http://osm-extracted-metros.s3.amazonaws.com/new-york.osm.bz2 -o data/osrm/nyc.osm.bz2;
-	./node_modules/osrm/lib/binding/osrm-extract -p ../../test/data/car.lua data/osrm/nyc.osm;
-	./node_modules/osrm/lib/binding/osrm-prepare -p ../../test/data/car.lua data/osrm/nyc.osrm;
-	./osrm-datastore data/osrm/nyc.osrm;
+	curl http://osm-extracted-metros.s3.amazonaws.com/new-york.osm.bz2 -o ./data/osrm/nyc.osm.bz2;
+	./node_modules/osrm/lib/binding/osrm-extract -p ./profile/car.lua ./data/osrm/nyc.osm.bz2;
+	./node_modules/osrm/lib/binding/osrm-prepare -p ./profile/car.lua ./data/osrm/nyc.osrm;
+	./node_modules/osrm/lib/binding/osrm-datastore ./data/osrm/nyc.osrm;
 
 draw:
 	rm -rf frames;
